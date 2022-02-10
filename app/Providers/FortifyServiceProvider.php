@@ -66,10 +66,11 @@ class FortifyServiceProvider extends ServiceProvider
                 $userActif = $user->actif;
                 if (Hash::check($request->password, $user->password) &&
                     $userActif == 1) {
-                    dd("ok");
+                    // dd("ok");
                     return $user;
                 } else {
-                    dd("pas ok");
+                    // dd("pas ok");
+                    // return view('inactif');
                 }
             }
 
