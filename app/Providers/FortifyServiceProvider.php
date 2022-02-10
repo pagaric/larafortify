@@ -69,6 +69,7 @@ class FortifyServiceProvider extends ServiceProvider
                     // dd("ok");
                     return $user;
                 } else {
+                    session()->flash('error', 'Votre compte a été désactivé');
                     // dd("pas ok");
                     // return view('inactif');
                 }
