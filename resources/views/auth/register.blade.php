@@ -3,7 +3,7 @@
 @section('content')
     @if ($errors->any())
         <div>
-            <div>{{ __('Quelque chose s\'est mal passé') }}</div>
+            <div><p>Quelque chose s'est mal passé</p></div>
 
             <ul>
                 @foreach ($errors->all() as $error)
@@ -17,33 +17,29 @@
         @csrf
 
         <div>
-            <label>{{ __('Nom') }}</label>
-            <input type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
+            <label for="name">Nom</label>
+            <input type="text" name="name" value="{{ old('name') }}" required autofocus />
         </div>
 
         <div>
-            <label>{{ __('Email') }}</label>
+            <label for="email">Email</label>
             <input type="email" name="email" value="{{ old('email') }}" required />
         </div>
 
         <div>
-            <label>{{ __('Mot de passe') }}</label>
-            <input type="password" name="password" required autocomplete="new-password" />
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" required />
         </div>
 
         <div>
-            <label>{{ __('Confirmer le mot de passe') }}</label>
-            <input type="password" name="password_confirmation" required autocomplete="new-password" />
+            <label for="password_confirmation">Confirmer le mot de passe</label>
+            <input type="password" name="password_confirmation" required />
         </div>
 
-        <a href="{{ route('login') }}">
-            {{ __('Déjà enregistré?') }}
-        </a>
+        <a href="{{ route('login') }}">Déjà enregistré ?</a>
 
         <div>
-            <button type="submit">
-                {{ __('Enregistrer') }}
-            </button>
+            <button type="submit">Enregistrer</button>
         </div>
     </form>
 @endsection
